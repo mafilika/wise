@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact Us</title>
+<link rel="stylesheet" href="style.css">
+<script>
+function sendToWhatsApp() {
+    var name = document.getElementById("name").value;
+    var phone = document.getElementById("phone").value;
+    var service = document.getElementById("service").value;
+    var message = document.getElementById("message").value;
+
+    var url = "https://wa.me/27793352699?text="
+    + "Hello MARULA MPHAMBANE JAMES LUBISI (PTY) LTD,%0A"
+    + "Name: " + name + "%0A"
+    + "Phone: " + phone + "%0A"
+    + "Service Needed: " + service + "%0A"
+    + "Message: " + message;
+
+    window.open(url, '_blank');
+}
+</script>
+</head>
+<body>
+
+<header>
+<div class="logo">MARULA MPHAMBANE JAMES LUBISI (PTY) LTD</div>
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="profile.html">Company Profile</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+
+<section class="page">
+<h1>Contact Us</h1>
+
+<form onsubmit="sendToWhatsApp(); return false;">
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="text" id="phone" placeholder="Your Phone Number" required>
+<input type="text" id="service" placeholder="Service Needed" required>
+<textarea id="message" placeholder="Your Message"></textarea>
+<button type="submit" class="btn-primary">Send To WhatsApp</button>
+</form>
+
+</section>
+
+<footer class="small-footer">
+Call: 082 968 5448
+</footer>
+
+<a href="https://wa.me/27793352699" class="whatsapp-float" target="_blank">💬</a>
+
+</body>
+</html>
